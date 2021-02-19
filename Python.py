@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 
 app = Flask(__name__)
@@ -25,6 +25,11 @@ def start_page():
 @app.route('/index/<title>')
 def index(title):
     return render_template('base.html', title=title)
+
+
+@app.route('/training/<profession>')
+def training(profession):
+    return render_template('second.html', profession=profession)
 
 
 if __name__ == '__main__':

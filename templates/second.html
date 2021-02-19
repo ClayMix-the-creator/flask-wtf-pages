@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if 'инженер' in profession.lower() or 'строитель' in profession.lower() %}
+        <div>
+            <h2 align="center">Инженерные технологии</h2>
+            <img src="/static/img/spaceship_tech.jpg" alt="здесь должна была быть картинка, но не нашлась">
+        </div>
+    {% else %}
+        <div>
+            <h2 align="center">Научные симуляторы</h2>
+            <img src="/static/img/spaceship_science.jpg" alt="здесь должна была быть картинка, но не нашлась">
+        </div>
+    {% endif %}
+{% endblock %}
